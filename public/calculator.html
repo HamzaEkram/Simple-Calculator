@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> CALCULATOR </title>
+
+<style>
+input[type="button"]{
+width:60px;
+border-radius:20px;
+margin:5px;
+height:60px;
+font-size:28px;
+font-weight:bold;
+background-color:blue;
+color:white;
+}
+
+
+input[type="button"]:hover
+{
+background-color:black;
+}
+
+body{
+background-color:black;
+}
+
+h1{
+color:white;
+}
+
+.container{
+margin-top:40px;
+width:310px;
+border-radius:20px;
+border:5px solid blue;
+
+height:410px;
+
+
+}
+</style>
+
+</head>
+<body>
+
+<center>
+<h1><b> JavaScript Calculator </b></h1>
+<div class="container">
+<form name="calculator">
+<input type="text" name="result" placeholder="0" style="width:280px; height:30px; text-align:right; font-size:30px;border-radius:10px; margin:4px"/>
+
+<br/>
+<input type="button" value="7" onclick="document.calculator.result.value += '7'">
+<input type="button" value="8" onclick="document.calculator.result.value += '8'">
+<input type="button" value="9" onclick="document.calculator.result.value += '9'">
+<input type="button" value="C" onclick="document.calculator.result.value = ''">
+<br/>
+
+<input type="button" value="4" onclick="document.calculator.result.value += '4'">
+<input type="button" value="5" onclick="document.calculator.result.value += '5'">
+<input type="button" value="6" onclick="document.calculator.result.value += '6'">
+<input type="button" value="/" onclick="btnDiv()">
+<br/>
+
+<input type="button" value="1" onclick="document.calculator.result.value += '1'">
+<input type="button" value="2" onclick="document.calculator.result.value += '2'">
+<input type="button" value="3" onclick="document.calculator.result.value += '3'">
+<input type="button" value="*" onclick="btnMul()">
+<br/>
+
+<input type="button" value="%" onclick="document.calculator.result.value += '%'">
+<input type="button" value="." onclick="document.calculator.result.value += '.'">
+<input type="button" value="+" onclick="btnAdd()">
+<input type="button" value="-" onclick="btnSub()"><br/>
+<input id="res" type="button" value="=" onclick="document.calculator.result.value=eval(document.calculator.result.value) " style="width:280px">
+
+
+</form>
+</div>
+</center> 
+
+</body>
+<script>
+ function btnAdd(){
+document.calculator.result.value +="+";
+
+}
+
+ function btnSub(){
+document.calculator.result.value +="-";
+}
+ function btnMul(){
+document.calculator.result.value +="*";
+}
+ function btnDiv(){
+document.calculator.result.value +="/";
+}
+
+</script>
+</html>
